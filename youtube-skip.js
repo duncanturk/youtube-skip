@@ -8,8 +8,9 @@ var interval;
 var notFoundCounter = 0;
 
 function checkOutdated(){
-    if(notFoundCounter++ > 120)
-        alert("YouYube-Skip-Skript may be outdated");
+    if(window.location.href.indexOf("youtube.com/watch") !== -1)
+        if(notFoundCounter++ > 120)
+            alert("YouYube-Skip-Skript may be outdated");
 }
 
 function checkLoaded(){
@@ -31,6 +32,6 @@ function startInterval(){
     interval = setInterval(checkLoaded, 1000);
 }
 
-if(window.location.href.indexOf("youtube.com/watch") !== -1)
+if(window.location.href.indexOf("youtube.com") !== -1)
     startInterval();
 
