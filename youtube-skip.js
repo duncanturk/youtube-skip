@@ -7,6 +7,7 @@
 var interval;
 var notFoundCounter = 0;
 
+//checks whether this skript is outdated
 function checkOutdated(){
     if(window.location.href.indexOf("youtube.com/watch") !== -1)
         if(notFoundCounter++ > 120)
