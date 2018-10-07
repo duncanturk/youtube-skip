@@ -19,9 +19,7 @@ function checkLoaded(){
         'ytd-toggle-button-renderer.style-scope.ytd-menu-renderer.style-text.force-icon-button '+
         'a.style-scope.ytd-toggle-button-renderer '+
         'yt-icon-button#button.style-scope.ytd-toggle-button-renderer.style-text').length>0){
-        if($('#top-level-buttons>:nth-child(2) *[aria-pressed="false"]').length < 1)
-            checkOutdated();
-        if($('#top-level-buttons>:nth-child(2) *[aria-pressed="true"]').length >0){
+        if($('#top-level-buttons>:nth-child(2) .style-default-active').length >0){
             console.log("skipped");
             $(".ytp-next-button")[0].click();
         }
